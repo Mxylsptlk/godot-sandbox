@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://d4if7ge3mpstu"]
+
+[ext_resource type="Texture2D" uid="uid://fivl8ok0rgfs" path="res://assets/Placeholders/2DPIXX - Free Topdown Shooter - Soldier - Walk.png" id="1_8afob"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dovo2"]
+atlas = ExtResource("1_8afob")
+region = Rect2(0, 0, 275, 275)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gmlin"]
+atlas = ExtResource("1_8afob")
+region = Rect2(275, 0, 275, 275)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lvxji"]
+atlas = ExtResource("1_8afob")
+region = Rect2(550, 0, 275, 275)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p47bc"]
+atlas = ExtResource("1_8afob")
+region = Rect2(825, 0, 275, 275)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_k6q0x"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dovo2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gmlin")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lvxji")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p47bc")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_k6q0x"]
+radius = 59.0
+height = 212.14575
+
+[node name="Player" type="Area2D" unique_id=1793387141]
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1029803815]
+sprite_frames = SubResource("SpriteFrames_k6q0x")
+frame = 1
+frame_progress = 0.30603004
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1603351774]
+position = Vector2(-5, 10.999999)
+rotation = -1.615474
+shape = SubResource("CapsuleShape2D_k6q0x")
