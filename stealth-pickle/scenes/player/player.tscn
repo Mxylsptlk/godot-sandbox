@@ -1,6 +1,26 @@
 [gd_scene format=3 uid="uid://d4if7ge3mpstu"]
 
 [ext_resource type="Texture2D" uid="uid://fivl8ok0rgfs" path="res://assets/Placeholders/2DPIXX - Free Topdown Shooter - Soldier - Walk.png" id="1_8afob"]
+[ext_resource type="Texture2D" uid="uid://i4y56r30b7rt" path="res://assets/Placeholders/2DPIXX - Free Topdown Shooter - Soldier - Hit.png" id="1_dovo2"]
+[ext_resource type="Script" uid="uid://ci7lijmqx55ye" path="res://scenes/player/player.gd" id="1_gmlin"]
+[ext_resource type="Script" uid="uid://bn2t5hwvj6amj" path="res://components/PlayerInput2D.gd" id="4_lvxji"]
+[ext_resource type="Script" uid="uid://chnib5j4xisys" path="res://components/CharacterRotation2D.gd" id="5_p47bc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_75vfm"]
+atlas = ExtResource("1_dovo2")
+region = Rect2(0, 0, 275, 275)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0owmy"]
+atlas = ExtResource("1_dovo2")
+region = Rect2(275, 0, 275, 275)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qek5x"]
+atlas = ExtResource("1_dovo2")
+region = Rect2(550, 0, 275, 275)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5gtgg"]
+atlas = ExtResource("1_dovo2")
+region = Rect2(825, 0, 275, 275)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dovo2"]
 atlas = ExtResource("1_8afob")
@@ -22,6 +42,23 @@ region = Rect2(825, 0, 275, 275)
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_75vfm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0owmy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qek5x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5gtgg")
+}],
+"loop": 1,
+"name": &"hit",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_dovo2")
 }, {
 "duration": 1.0,
@@ -34,23 +71,31 @@ animations = [{
 "texture": SubResource("AtlasTexture_p47bc")
 }],
 "loop": 1,
-"name": &"default",
+"name": &"walk",
 "speed": 5.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_k6q0x"]
-radius = 59.0
+radius = 70.01947
 height = 212.14575
 
 [node name="Player" type="Area2D" unique_id=1793387141]
+script = ExtResource("1_gmlin")
 metadata/_edit_group_ = true
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1029803815]
+[node name="PlayerSprite" type="AnimatedSprite2D" parent="." unique_id=1029803815]
 sprite_frames = SubResource("SpriteFrames_k6q0x")
-frame = 1
-frame_progress = 0.30603004
+animation = &"walk"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1603351774]
+[node name="PlayerCollision" type="CollisionShape2D" parent="." unique_id=1603351774]
 position = Vector2(-5, 10.999999)
 rotation = -1.615474
 shape = SubResource("CapsuleShape2D_k6q0x")
+
+[node name="PlayerInput2D" type="Node" parent="." unique_id=1813435959]
+script = ExtResource("4_lvxji")
+metadata/_custom_type_script = "uid://bn2t5hwvj6amj"
+
+[node name="PlayerRotate" type="Node" parent="." unique_id=297597641]
+script = ExtResource("5_p47bc")
+metadata/_custom_type_script = "uid://chnib5j4xisys"
