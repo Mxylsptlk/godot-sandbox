@@ -99,3 +99,5 @@ metadata/_custom_type_script = "uid://bn2t5hwvj6amj"
 [node name="PlayerRotate" type="Node" parent="." unique_id=297597641]
 script = ExtResource("5_p47bc")
 metadata/_custom_type_script = "uid://chnib5j4xisys"
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1801008049]

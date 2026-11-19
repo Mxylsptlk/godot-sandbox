@@ -26,4 +26,4 @@ func _process(delta: float) -> void:
 		$PlayerSprite.stop() # This must change
 	
 	position += velocity * delta
-	position = position.clamp(Vector2.ZERO, screen_size)
+	#position = position.clamp(Vector2.ZERO, screen_size)
