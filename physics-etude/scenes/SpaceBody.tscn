@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dfggu7m6dedrl"]
+
+[ext_resource type="Script" uid="uid://d4js7mb06j2ci" path="res://scenes/SpaceBody.gd" id="1_28nq6"]
+[ext_resource type="Texture2D" uid="uid://dxbeltsd424yl" path="res://icon.svg" id="2_3fm6h"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p3gpc"]
+size = Vector2(126, 127)
+
+[node name="SpaceBody" type="CharacterBody2D" unique_id=2064398238]
+script = ExtResource("1_28nq6")
+metadata/_edit_group_ = true
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=1046816656]
+position = Vector2(1, 11)
+texture = ExtResource("2_3fm6h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=645149340]
+position = Vector2(1, 6)
+shape = SubResource("RectangleShape2D_p3gpc")
