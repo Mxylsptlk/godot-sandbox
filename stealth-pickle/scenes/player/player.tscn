@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://ci7lijmqx55ye" path="res://scenes/player/player.gd" id="1_gmlin"]
 [ext_resource type="Script" uid="uid://bn2t5hwvj6amj" path="res://components/PlayerInput2D.gd" id="4_lvxji"]
 [ext_resource type="Script" uid="uid://chnib5j4xisys" path="res://components/CharacterRotation2D.gd" id="5_p47bc"]
+[ext_resource type="Script" uid="uid://cdgvdbdn4bnmt" path="res://components/PlayerHit.gd" id="6_75vfm"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_75vfm"]
 atlas = ExtResource("1_dovo2")
@@ -41,19 +42,19 @@ region = Rect2(825, 0, 275, 275)
 [sub_resource type="SpriteFrames" id="SpriteFrames_k6q0x"]
 animations = [{
 "frames": [{
-"duration": 1.0,
+"duration": 0.5,
 "texture": SubResource("AtlasTexture_75vfm")
 }, {
-"duration": 1.0,
+"duration": 0.5,
 "texture": SubResource("AtlasTexture_0owmy")
 }, {
-"duration": 1.0,
+"duration": 0.5,
 "texture": SubResource("AtlasTexture_qek5x")
 }, {
-"duration": 1.0,
+"duration": 0.5,
 "texture": SubResource("AtlasTexture_5gtgg")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"hit",
 "speed": 5.0
 }, {
@@ -79,13 +80,13 @@ animations = [{
 radius = 70.01947
 height = 212.14575
 
-[node name="Player" type="Area2D" unique_id=1793387141]
+[node name="Player" type="CharacterBody2D" unique_id=980627996]
 script = ExtResource("1_gmlin")
 metadata/_edit_group_ = true
 
 [node name="PlayerSprite" type="AnimatedSprite2D" parent="." unique_id=1029803815]
 sprite_frames = SubResource("SpriteFrames_k6q0x")
-animation = &"walk"
+animation = &"hit"
 
 [node name="PlayerCollision" type="CollisionShape2D" parent="." unique_id=1603351774]
 position = Vector2(-5, 10.999999)
@@ -99,5 +100,9 @@ metadata/_custom_type_script = "uid://bn2t5hwvj6amj"
 [node name="PlayerRotate" type="Node" parent="." unique_id=297597641]
 script = ExtResource("5_p47bc")
 metadata/_custom_type_script = "uid://chnib5j4xisys"
+
+[node name="PlayerHit" type="Node" parent="." unique_id=1069444123]
+script = ExtResource("6_75vfm")
+metadata/_custom_type_script = "uid://cdgvdbdn4bnmt"
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1801008049]

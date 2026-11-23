@@ -7,7 +7,6 @@ func move_dir() -> Vector2:
 		"move_left","move_right",
 		"move_forward","move_back"
 	)
-	print(input_vec)
 	return input_vec
 
 # Called when the node enters the scene tree for the first time.
