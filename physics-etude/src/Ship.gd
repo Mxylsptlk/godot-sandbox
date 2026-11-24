@@ -1,6 +1,6 @@
-class_name Player extends Node
+class_name Ship extends Node
 
-@onready var ship: SpaceBody = $Ship
+@onready var space_body: SpaceBody = $SpaceBody
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -9,6 +9,4 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	var inputs = Input.get_vector("move_left","move_right","move_up","move_down")
-	ship.velocity = inputs * ship.SPEED
 	pass

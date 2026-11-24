@@ -1,10 +1,11 @@
 [gd_scene format=3 uid="uid://cwwfd8tmcxv6w"]
 
-[ext_resource type="PackedScene" uid="uid://dfggu7m6dedrl" path="res://scenes/SpaceBody.tscn" id="1_p0vlq"]
-[ext_resource type="Script" uid="uid://drmxrqu6cvi5p" path="res://scenes/Player.gd" id="1_v6fml"]
+[ext_resource type="Script" uid="uid://drmxrqu6cvi5p" path="res://src/Player.gd" id="1_v6fml"]
+[ext_resource type="Script" uid="uid://bijn58aysxol3" path="res://src/Ship.gd" id="2_v6fml"]
 
 [node name="Player" type="Node" unique_id=1280496191]
 script = ExtResource("1_v6fml")
 
-[node name="Ship" parent="." unique_id=2064398238 instance=ExtResource("1_p0vlq")]
-position = Vector2(1, -2)
+[node name="Ship" type="Node" parent="." unique_id=504407678]
+script = ExtResource("2_v6fml")
+metadata/_custom_type_script = "uid://bijn58aysxol3"

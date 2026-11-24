@@ -1,11 +1,7 @@
 [gd_scene format=3 uid="uid://bawg5gp372fkx"]
 
-[ext_resource type="PackedScene" uid="uid://dfggu7m6dedrl" path="res://scenes/SpaceBody.tscn" id="1_errlg"]
 [ext_resource type="PackedScene" uid="uid://cwwfd8tmcxv6w" path="res://scenes/Player.tscn" id="2_bl13t"]
 
 [node name="Test" type="Node2D" unique_id=369651208]
-
-[node name="SpaceBody" parent="." unique_id=2064398238 instance=ExtResource("1_errlg")]
-position = Vector2(904, 168)
 
 [node name="Player" parent="." unique_id=1280496191 instance=ExtResource("2_bl13t")]

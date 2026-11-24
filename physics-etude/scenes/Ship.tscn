@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://b2sm16c7e3708"]
+
+[ext_resource type="Script" uid="uid://d4js7mb06j2ci" path="res://src/SpaceBody.gd" id="1_ai6ab"]
+[ext_resource type="Script" uid="uid://bijn58aysxol3" path="res://src/Ship.gd" id="1_gjfe0"]
+[ext_resource type="Script" uid="uid://sjabdevykgpu" path="res://src/Thrusters.gd" id="3_qq457"]
+
+[node name="Ship" type="Node" unique_id=776919828]
+script = ExtResource("1_gjfe0")
+
+[node name="SpaceBody" type="CharacterBody2D" parent="." unique_id=1920257660]
+script = ExtResource("1_ai6ab")
+metadata/_custom_type_script = "uid://d4js7mb06j2ci"
+
+[node name="Thrusters" type="Node" parent="." unique_id=783649486]
+script = ExtResource("3_qq457")
+metadata/_custom_type_script = "uid://sjabdevykgpu"
