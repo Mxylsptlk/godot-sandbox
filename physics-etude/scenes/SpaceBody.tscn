@@ -1,6 +1,0 @@
-[gd_scene format=3 uid="uid://om7cwpnyhtba"]
-
-[ext_resource type="Script" uid="uid://d4js7mb06j2ci" path="res://src/SpaceBody.gd" id="1_hd0wg"]
-
-[node name="SpaceBody" type="CharacterBody2D" unique_id=55836560]
-script = ExtResource("1_hd0wg")

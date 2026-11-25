@@ -1,7 +1,11 @@
 [gd_scene format=3 uid="uid://bawg5gp372fkx"]
 
 [ext_resource type="PackedScene" uid="uid://cwwfd8tmcxv6w" path="res://scenes/Player.tscn" id="2_bl13t"]
+[ext_resource type="PackedScene" uid="uid://dpf033sb6dcbn" path="res://scenes/Meteor.tscn" id="2_iyx0m"]
 
 [node name="Test" type="Node2D" unique_id=369651208]
 
 [node name="Player" parent="." unique_id=1280496191 instance=ExtResource("2_bl13t")]
+
+[node name="Meteor" parent="." unique_id=1215686300 instance=ExtResource("2_iyx0m")]
+position = Vector2(395, -171)

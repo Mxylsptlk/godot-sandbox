@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://cwwfd8tmcxv6w"]
 
 [ext_resource type="Script" uid="uid://drmxrqu6cvi5p" path="res://src/Player.gd" id="1_v6fml"]
-[ext_resource type="Script" uid="uid://bijn58aysxol3" path="res://src/Ship.gd" id="2_v6fml"]
+[ext_resource type="PackedScene" uid="uid://b2sm16c7e3708" path="res://scenes/Ship.tscn" id="2_3li8b"]
 
-[node name="Player" type="Node" unique_id=1280496191]
+[node name="Player" type="Node" unique_id=1117360446]
 script = ExtResource("1_v6fml")
 
-[node name="Ship" type="Node" parent="." unique_id=504407678]
-script = ExtResource("2_v6fml")
-metadata/_custom_type_script = "uid://bijn58aysxol3"
+[node name="Ship" parent="." unique_id=1906630847 instance=ExtResource("2_3li8b")]
+
+[node name="Camera2D" type="Camera2D" parent="Ship" unique_id=1295760071]

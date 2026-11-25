@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://dpf033sb6dcbn"]
+
+[ext_resource type="Script" uid="uid://c4wnkf2tn48sn" path="res://src/Meteor.gd" id="1_pkplu"]
+[ext_resource type="Texture2D" uid="uid://dxbeltsd424yl" path="res://icon.svg" id="2_rsaf7"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_k6q0x"]
+bounce = 1.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k6q0x"]
+size = Vector2(124, 124)
+
+[node name="Meteor" type="RigidBody2D" unique_id=1215686300]
+physics_material_override = SubResource("PhysicsMaterial_k6q0x")
+gravity_scale = 0.0
+script = ExtResource("1_pkplu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=890118048]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_k6q0x")
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=371921768]
+texture = ExtResource("2_rsaf7")
