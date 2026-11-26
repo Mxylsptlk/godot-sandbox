@@ -16,6 +16,13 @@ shape = SubResource("RectangleShape2D_slbyd")
 mass = 100.0
 metadata/_custom_type_script = "uid://dvwp0lcrjqftl"
 
+[sub_resource type="Resource" id="Resource_bl13t"]
+script = ExtResource("3_ky8oh")
+Isp = 250.0
+burn_rate_lps = 1.0
+mass = 10.0
+metadata/_custom_type_script = "uid://dkeaiati0y6m0"
+
 [sub_resource type="Resource" id="Resource_jgha0"]
 script = ExtResource("3_ky8oh")
 mass = 25.0
@@ -25,6 +32,7 @@ metadata/_custom_type_script = "uid://dkeaiati0y6m0"
 script = ExtResource("2_qq457")
 hull = SubResource("Resource_qq457")
 thrusters = SubResource("Resource_jgha0")
+stearing_thrusters = SubResource("Resource_bl13t")
 metadata/_custom_type_script = "uid://blkgeu3qgr7c3"
 
 [node name="Ship" type="CharacterBody2D" unique_id=1906630847]

@@ -9,5 +9,7 @@ func _process(delta: float) -> void:
 	if inputs.y < 0:
 		#print(inputs)
 		ship.accelerate(delta)
-	
-	ship.rotate(inputs.x * delta)
+	if abs(inputs.x) > 0:
+		print(inputs.x)
+		ship.accelerate_rotation(inputs.x, delta)
+	#ship.rotate(inputs.x * delta)
